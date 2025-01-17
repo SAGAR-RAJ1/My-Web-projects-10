@@ -1,0 +1,48 @@
+.Container{
+    display: flex;
+    max-width: 1280px;
+margin: 0 auto;
+align-items: center;
+height:calc(100vh-80px) ;
+
+
+padding: .625rem;
+
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+h1{
+    font-weight: 800;
+line-height: 102px;
+font-size: 108px;
+}
+.shoe{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: azure;
+}
+p{
+    font-weight: 600;
+    max-width: 25.25rem;
+}
+.catg{
+    margin-left: .9375rem;
+    background-color: transparent;
+    color: grey;
+    border: 1px solid grey;
+
+        cursor: pointer;
+
+}
+
+.logos img{
+    margin-left: .9375rem;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
