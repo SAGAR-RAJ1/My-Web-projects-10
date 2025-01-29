@@ -123,6 +123,17 @@ body {
   border:2px solid black;
   color: #3c3a3a;
 }
+.time-container{
+  display: inline;
 
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+.time-container div{
+  display: inline;
+
+font-size: large;
+
+}
 
 }
