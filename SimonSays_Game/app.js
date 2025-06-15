@@ -20,6 +20,13 @@ document.addEventListener("keypress",()=>{
 levelup()
     }
 })
+document.addEventListener("touchstart",()=>{
+    if(start==false){
+    console.log("Game Started");
+    start=true;
+levelup()
+    }
+})
 function checkAns(index){
     // let index= level-1;   fixed index need to change
     if (userSeq[index]===gameSeq[index]) {
