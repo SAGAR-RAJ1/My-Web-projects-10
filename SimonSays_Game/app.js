@@ -11,10 +11,16 @@ document.addEventListener("keypress",()=>{
 levelup()
     }
 })
+function btnFlash(btn){
+btn.classList.add("flash");
+setTimeout(() => {
+    btn.classList.remove("flash");}, 1000);
+}
 
 function levelup(){
     level++;
 
     heading.innerText=`Level ${level}`;
+btnFlash();
 
 }
