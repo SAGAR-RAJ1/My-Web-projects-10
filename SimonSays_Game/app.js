@@ -4,6 +4,14 @@ let btns=["pink","blue","orange","purple"];
 let heading = document.querySelector("h2");
 let start=false;
 let level = 0;
+let h4 = document.querySelector("h4");
+let Score=0;
+function highScore(){
+    if(level>Score){
+        Score=level;
+        h4.innerText=`High Score : ${level}`;
+    }
+};
 
 document.addEventListener("keypress",()=>{
     if(start==false){
@@ -40,6 +48,7 @@ setTimeout(() => {
 }
 
 function levelup(){
+    highScore();
     level++;
     userSeq=[];
 
