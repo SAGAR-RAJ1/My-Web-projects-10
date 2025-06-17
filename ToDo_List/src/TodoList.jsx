@@ -1,12 +1,13 @@
 import { useState } from "react";
 export default function TodoList() {
-  const [Todo, setTodo] = useState(["Sagar will made this todo app"]);
+  const [Todo, setTodo] = useState([]);
   const [New, setNew] = useState("");
   function btnclick() {
     // console.log("button click to add todo")
-    
-
-    setTodo([...Todo,New]);
+    Todo.push(New)
+//Address re refrence krne k liye spread operator use krte h kuki change detect hoga react ko tb update krega
+// setTodo([...Todo,New])  aise v likh shkte {array or object same case pdega}
+    setTodo([...Todo]);
     setNew("")
   }
   let updatevalue = (event) => {
