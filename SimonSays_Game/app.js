@@ -35,7 +35,7 @@ function checkAns(index){
              setTimeout(levelup,1000);
         }
     } else {
-        heading.innerHTML=`Game over! Your score was ${level} <br><br> Press any key to start Again<> `
+        heading.innerHTML=`Game over! Your score was ${Score} <br><br> Press any key to start Again<> `
         start=false;
         gameSeq=[];
         userSeq=[];
