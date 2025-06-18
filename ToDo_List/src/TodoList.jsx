@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+
 export default function TodoList() {
-  const [Todo, setTodo] = useState([]);
+  const [Todo, setTodo] = useState([{task:"Sample Task",id: uuidv4()}]);
   const [New, setNew] = useState("");
   function btnclick() {
     // console.log("button click to add todo")
-    Todo.push(New)
+    Todo.push({task:New , id:uuidv4()})
 //Address re refrence krne k liye spread operator use krte h kuki change detect hoga react ko tb update krega
 // setTodo([...Todo,New])  aise v likh shkte {array or object same case pdega}
     setTodo([...Todo]);
@@ -36,7 +38,7 @@ export default function TodoList() {
       <h3>Tasks</h3>
       <ul>
         {Todo.map((a) => (
-          <li>{a}</li>
+          <li key={a.id}>{a.task}</li>
         ))}
       </ul>
     </div>
