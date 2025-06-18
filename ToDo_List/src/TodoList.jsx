@@ -10,13 +10,19 @@ export default function TodoList() {
     setTodo([...Todo]);
     setNew("")
   }
+  
+  function HandleKeyPress(event) {
+    if (event.key === "Enter") {
+      btnclick();
+    }
+  }
   let updatevalue = (event) => {
     // console.log(event.target)
     setNew(event.target.value);
   };
   return (
     <div>
-      <input placeholder="Add a Task" onChange={updatevalue} value={New} />
+      <input placeholder="Add a Task" onChange={updatevalue} value={New} onKeyDown={HandleKeyPress}/>
       <button onClick={btnclick}>Add</button>
       <br />
       <br />
