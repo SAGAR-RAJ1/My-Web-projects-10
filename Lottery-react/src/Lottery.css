@@ -1,0 +1,10 @@
+.tickets{
+    border: 2px solid rgb(250, 157, 238) ;
+    padding:.375rem;
+    border-radius: 10px;
+
+}
+.tickets span{
+    margin: 0.35rem;
+    font-size: x-large;
+}
